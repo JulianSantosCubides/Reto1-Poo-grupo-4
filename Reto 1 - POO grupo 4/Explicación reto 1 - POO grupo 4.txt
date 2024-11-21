@@ -1,0 +1,43 @@
+************ Explicación de los 5 ejercicios para el reto 1 Programación Orientada a Objetos grupo 4 ************
+
+
+-----------------------------------------------------------------------
+Ejercicio 1 (calculadora)
+
+Para el ejercicio 1, recibí cada números y la operación en variables separadas, y con un 'if' y tres 'elif (uno por cada operación) validé el signo (operador) que se había ingresado y realicé la respectiva operación.
+
+
+
+
+
+-----------------------------------------------------------------------
+Ejercicio 2 (Palíndromo)
+
+Para este ejercicio, lo primero que hice fue recibir la palabra ingresa en una variable y convertir todos sus caracteres a minúsculas, pues para saber si es un palíndromo o no, no se debería tener en cuenta mayúsculas y minúsculas, pues termina siendo la misma palabra. Posteriormente, inicialicé una variable 'normalPosition' en 0, calculé la longitud de la palabra, y hallé una segunda longitud (la longitud de la palabra dividida entre 2 - tomé la parte entera); la variable 'normalPosition' servirá para recorrer desde 0 las posiciones de la palabra ingresada; la longitud de la palabra servirá para recorrer desde la posición final (hacia atrás) las posiciones de la palabra ingresada; y finalmente, la longitud media servirá para recorrer la palabra desde el final hasta la mitad, pues si una mitad es igual a la otra, entonces toda la palabra es igual y, por lo tanto, es un palíndromo. De esta manera se siguió el proceso descrito previamente, comparando la primera posición con la última, la segunda con la penúltima, y así sucesivamente hasta recorrer la mita de la palabra y determinar si es un palíndromo.
+
+
+
+
+
+
+-----------------------------------------------------------------------
+Ejercicio 3 (Retornar primos)
+
+En primer lugar, se recibió la lista de números en un string, y se pide que estén separados por espacios (el try-except se utiliza para que, si un valor ingresado no sea un número o no sea un número entero, cuando el programa trate de convertirlo a entero boté el error pero se notifiqué la razón). Luego se separó para almacenar cada número en una posición de una lista. Se recorrió cada número de la lista con un for inicial, luego se creó un segundo for iniciando en 2, con paso de 1, hasta la mitad del número (pues el mayor divisor, aparte del mismo número, es la mitad del número, por lo tanto, no tiene sentido validar la división en los números mayores a la mitad del propio número), y se validó la división del número del primer for (dividendo), con cada número del segundo for (divisor), si el residuo era 0, significaba que sí era un divisor del número y aumentaba el contador de divisores. Posteriormente, se validaba si el contador de divisores era 0 (pues el for de divisores iniciaba en 2 e iba hasta la mitad del número, por lo tanto, el divisor 1 y el mismo número no se contaban en los for), y en tal caso, se determina que el número es primo y se añada a la lista de númerosPrimos. Este proceso  se realizó con cada número ingresado.
+Para los números 1 y 2, no se realiza el proceso de validar divisores, pues se añaden directamente a la lista de numerosPrimos, y con los números menores a 1, tampoco se realiza el proceso del for, pues se sabe inmediatamente que no son primos.
+
+
+
+
+
+-----------------------------------------------------------------------
+Ejercicio 4 (Mayor suma consecutiva)
+
+Para este ejercicio, se recibió en un string los números ingresados con la misma solicitud del ejercicio anterior (separados por espacios), después se convirtieron a enteros antes de enviarlos a la función en una nueva lista, y se utilizó el try-except nuevamente para informar si algún valor ingresado no era un número entero. Después de enviar una lista de números enteros a la función, en la función se valida si se tiene por lo menos dos números y se inicia un for que recorre todas las posiciones de la lista, sumando la posición i de la lista, con la posición i+1 de la lista (sumando números consecutivos). Posteriormente se inicializa una variable 'max_sum' como la mayor suma inicial, sumando las dos primeras posiciones de la lista, y después se va sumando la posición 2 con la posición 2+1, la 3 con la 3+1, y así sucesivamente, y si alguna de estas sumas que se realiza, es mayor a la variable inicializada 'max_sum', entonces, la variable 'max_sum' tomará el valor de esa mayor suma, y este será el valor retornado por la función.
+
+
+
+
+
+-----------------------------------------------------------------------
+
